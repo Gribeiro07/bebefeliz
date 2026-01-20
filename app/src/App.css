@@ -1,0 +1,52 @@
+/* App-specific styles */
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom selection color */
+::selection {
+  background-color: rgba(163, 217, 177, 0.3);
+  color: #2c3e50;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #a3d9b1;
+  outline-offset: 2px;
+}
+
+/* Image loading placeholder */
+img {
+  background-color: #f8f5f2;
+}
+
+/* Prevent content shift during font loading */
+.font-display,
+.font-script {
+  font-display: swap;
+}
+
+/* Mobile touch improvements */
+@media (hover: none) {
+  .btn-magnetic:hover {
+    transform: none;
+  }
+  
+  .card-hover:hover {
+    transform: none;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
