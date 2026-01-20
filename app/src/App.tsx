@@ -3,7 +3,7 @@ import { Navigation } from './sections/Navigation';
 import { Hero } from './sections/Hero';
 import { About } from './sections/About';
 import { Benefits } from './sections/Benefits';
-import { Ingredients } from './sections/Ingredients';
+import { MethodFeatures } from './sections/MethodFeatures';
 import { Testimonials } from './sections/Testimonials';
 import { FAQ } from './sections/FAQ';
 import { Buy } from './sections/Buy';
@@ -17,7 +17,7 @@ function App() {
         <Hero />
         <About />
         <Benefits />
-        <Ingredients />
+        <MethodFeatures />
         <Testimonials />
         <FAQ />
         <Buy />

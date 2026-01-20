@@ -27,12 +27,12 @@ export function About() {
     {
       icon: Leaf,
       title: '100% Natural',
-      description: 'Composto por ingredientes naturais cuidadosamente selecionados',
+      description: 'Técnica totalmente manual, sem uso de remédios',
     },
     {
       icon: Shield,
-      title: 'Sem Açúcar',
-      description: 'Livre de açúcar e álcool, totalmente seguro para bebês',
+      title: 'Segurança Total',
+      description: 'Método suave e seguro para bebês de todas as idades',
     },
     {
       icon: Clock,
@@ -42,7 +42,7 @@ export function About() {
     {
       icon: Award,
       title: 'Recomendado',
-      description: 'Aprovado e recomendado por pediatras em todo Brasil',
+      description: 'Validado por pediatras em todo o Brasil',
     },
   ];
 
@@ -50,7 +50,7 @@ export function About() {
     <section id="about" ref={sectionRef} className="py-20 lg:py-32 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-mint/5 to-transparent pointer-events-none" />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
@@ -58,7 +58,7 @@ export function About() {
             <div className="relative">
               {/* Decorative blob */}
               <div className="absolute -top-8 -left-8 w-full h-full bg-mint/20 rounded-3xl blob" />
-              
+
               {/* Main image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
@@ -66,11 +66,11 @@ export function About() {
                   alt="Mãe e bebê feliz"
                   className="w-full aspect-[4/3] object-cover"
                 />
-                
+
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-mint/20 to-transparent" />
               </div>
-              
+
               {/* Floating badge */}
               <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-4 animate-float">
                 <div className="flex items-center gap-3">
@@ -85,13 +85,13 @@ export function About() {
               </div>
             </div>
           </div>
-          
+
           {/* Content */}
           <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
             <span className="inline-block px-4 py-1 bg-mint/10 rounded-full text-sm font-medium text-mint-dark mb-4">
-              Sobre o Produto
+              Sobre o Método
             </span>
-            
+
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6">
               Confiado por{' '}
               <span className="font-script text-peach-dark text-5xl lg:text-6xl">mães</span>
@@ -99,18 +99,18 @@ export function About() {
               <span className="font-script text-mint-dark text-5xl lg:text-6xl">pediatras</span>
               {' '}em todo o Brasil
             </h2>
-            
+
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              O Bebê Feliz foi desenvolvido com muito carinho pensando no bem-estar dos pequenos. 
-              Nossa fórmula única combina ingredientes naturais que ajudam a aliviar a cólica de forma 
+              O Método Shantala Bebê Feliz foi desenvolvido com muito carinho pensando no bem-estar dos pequenos.
+              Nossa técnica, amplamente estudada e testada, ajuda a aliviar a cólica de forma
               suave e eficaz, trazendo conforto para o bebê e tranquilidade para toda a família.
             </p>
-            
+
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-              Cada gota é resultado de anos de pesquisa e testes rigorosos, garantindo um produto 
-              seguro, eficaz e livre de componentes artificiais que possam causar malefícios ao seu bebê.
+              Cada movimento do método é resultado de anos de prática e validação, garantindo uma técnica
+              segura, eficaz e livre de intervenções medicamentosas, promovendo apenas saúde e conexão.
             </p>
-            
+
             {/* Feature grid */}
             <div className="grid sm:grid-cols-2 gap-6">
               {features.map((feature, index) => (

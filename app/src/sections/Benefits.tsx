@@ -29,15 +29,15 @@ export function Benefits() {
       icon: Clock,
       title: 'Alívio Rápido',
       subtitle: 'Em apenas 15 minutos',
-      description: 'Nossa fórmula age rapidamente no sistema digestivo do bebê, proporcionando alívio imediato da dor e desconforto causados pela cólica.',
+      description: 'A técnica age rapidamente relaxando a musculatura e o sistema digestivo do bebê, proporcionando alívio notável já na primeira sessão.',
       color: 'bg-mint',
       lightColor: 'bg-mint/10',
     },
     {
       icon: Leaf,
       title: '100% Natural',
-      subtitle: 'Ingredientes seguros',
-      description: 'Composto exclusivamente por ingredientes naturais cuidadosamente selecionados, sem adição de químicos ou componentes artificiais.',
+      subtitle: 'Sem medicamentos',
+      description: 'Método totalmente manual e natural, sem necessidade de ingestão de remédios ou produtos químicos. Apenas o toque de amor.',
       color: 'bg-peach',
       lightColor: 'bg-peach/10',
     },
@@ -45,7 +45,7 @@ export function Benefits() {
       icon: ShieldCheck,
       title: 'Totalmente Seguro',
       subtitle: 'Sem contraindicações',
-      description: 'Livre de açúcar, álcool e conservantes. Testado e aprovado por pediatras, garantindo total segurança para o seu bebê.',
+      description: 'Técnica validada por especialistas e recomendada por pediatras, garantindo total segurança para recém-nascidos.',
       color: 'bg-mint',
       lightColor: 'bg-mint/10',
     },
@@ -53,15 +53,15 @@ export function Benefits() {
       icon: Award,
       title: 'Recomendado',
       subtitle: 'Por especialistas',
-      description: 'Aprovado e recomendado por mais de 500 pediatras em todo o Brasil. Confiado por milhares de famílias.',
+      description: 'Aprovado e recomendado por pediatras e fisioterapeutas em todo o Brasil como a melhor alternativa natural para cólicas.',
       color: 'bg-peach',
       lightColor: 'bg-peach/10',
     },
     {
       icon: Droplets,
-      title: 'Fácil Aplicação',
-      subtitle: 'Prático e rápido',
-      description: 'Com conta-gotas preciso, basta adicionar à mamadeira ou diretamente na boca do bebê. Simples e prático para os pais.',
+      title: 'Fácil de Aprender',
+      subtitle: 'Passo a passo simples',
+      description: 'Vídeo-aulas didáticas e objetivas. Qualquer pessoa pode aprender e aplicar a técnica com segurança no conforto de casa.',
       color: 'bg-mint',
       lightColor: 'bg-mint/10',
     },
@@ -69,7 +69,7 @@ export function Benefits() {
       icon: Heart,
       title: 'Bem-Estar Total',
       subtitle: 'Sono tranquilo',
-      description: 'Além de aliviar a cólica, promove um sono mais tranquilo e reparador, trazendo mais disposição para o bebê.',
+      description: 'Além de aliviar a cólica, promove um sono mais tranquilo, reduz o choro e fortalece o vínculo entre pais e bebê.',
       color: 'bg-peach',
       lightColor: 'bg-peach/10',
     },
@@ -82,7 +82,7 @@ export function Benefits() {
         <div className="absolute top-1/4 left-0 w-64 h-64 bg-cream/30 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-mint/10 rounded-full blur-3xl" />
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
         <div className={`text-center max-w-3xl mx-auto mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -103,9 +103,8 @@ export function Benefits() {
           {benefits.map((benefit, index) => (
             <div
               key={benefit.title}
-              className={`group relative bg-white rounded-2xl p-6 lg:p-8 shadow-soft card-hover cursor-pointer transition-all duration-700 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              } ${activeCard === index ? 'ring-2 ring-mint' : ''}`}
+              className={`group relative bg-white rounded-2xl p-6 lg:p-8 shadow-soft card-hover cursor-pointer transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                } ${activeCard === index ? 'ring-2 ring-mint' : ''}`}
               style={{ transitionDelay: `${index * 100}ms` }}
               onMouseEnter={() => setActiveCard(index)}
             >
@@ -113,12 +112,12 @@ export function Benefits() {
               <div className={`w-14 h-14 ${benefit.lightColor} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <benefit.icon className={`w-7 h-7 ${benefit.color === 'bg-mint' ? 'text-mint-dark' : 'text-peach-dark'}`} />
               </div>
-              
+
               {/* Content */}
               <h3 className="font-display text-xl text-foreground mb-2">{benefit.title}</h3>
               <p className="text-sm font-medium text-mint-dark mb-3">{benefit.subtitle}</p>
               <p className="text-muted-foreground text-sm leading-relaxed">{benefit.description}</p>
-              
+
               {/* Hover decoration */}
               <div className={`absolute top-4 right-4 w-2 h-2 ${benefit.color} rounded-full opacity-0 group-hover:opacity-100 transition-opacity`} />
             </div>
@@ -131,9 +130,8 @@ export function Benefits() {
             <button
               key={index}
               onClick={() => setActiveCard(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                activeCard === index ? 'w-8 bg-mint' : 'bg-mint/30'
-              }`}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${activeCard === index ? 'w-8 bg-mint' : 'bg-mint/30'
+                }`}
             />
           ))}
         </div>

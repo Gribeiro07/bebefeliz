@@ -26,36 +26,28 @@ export function FAQ() {
 
   const faqs = [
     {
-      question: 'O Bebê Feliz é seguro para recém-nascidos?',
-      answer: 'Sim, o Bebê Feliz é totalmente seguro para recém-nascidos. Nossa fórmula é 100% natural, livre de açúcar, álcool e conservantes. É testado dermatologicamente e recomendado por pediatras. Pode ser usado desde os primeiros dias de vida.',
+      question: 'O Método Shantala é seguro para recém-nascidos?',
+      answer: 'Sim, totalmente seguro. A técnica é suave e respeita a fisiologia do bebê. Pode ser aplicada desde os primeiros dias de vida (após a queda do umbigo, conforme recomendação tradicional) e é amplamente recomendada por pediatras.',
     },
     {
-      question: 'Como devo administrar o produto ao meu bebê?',
-      answer: 'O Bebê Feliz vem com um conta-gotas prático. Você pode adicionar as gotas diretamente na boca do bebê ou misturar na mamadeira/leite materno. A dosagem recomendada é de 5 gotas, 3 vezes ao dia, ou conforme orientação do seu pediatra.',
+      question: 'Como acesso o curso após a compra?',
+      answer: 'O acesso é imediato! Assim que o pagamento for confirmado, você receberá um e-mail com seus dados de login para nossa plataforma exclusiva, onde terá acesso a todas as vídeo-aulas e bônus.',
     },
     {
-      question: 'Quanto tempo leva para fazer efeito?',
-      answer: 'Muitos pais relatam alívio dos sintomas em apenas 15 minutos após a aplicação. No entanto, cada bebê é único e os resultados podem variar. O uso contínuo ajuda a prevenir novas crises de cólica.',
+      question: 'Preciso de algum óleo especial?',
+      answer: 'Recomendamos o uso de óleos vegetais naturais (como semente de uva, amêndoas doces ou coco), que são seguros para a pele do bebê. No curso, explicamos detalhadamente quais os melhores óleos para cada situação.',
     },
     {
-      question: 'Posso usar o Bebê Feliz junto com outros medicamentos?',
-      answer: 'O Bebê Feliz é natural e geralmente não interfere com outros medicamentos. No entanto, sempre consulte o pediatra do seu bebê antes de combinar com outros tratamentos, especialmente se seu filho tiver condições de saúde específicas.',
+      question: 'Serve para bebês de qual idade?',
+      answer: 'O método é extremamente benéfico desde o primeiro mês até a fase pré-escolar. As técnicas ajudam nas cólicas do recém-nascido e, posteriormente, no relaxamento e desenvolvimento motor da criança maior.',
     },
     {
-      question: 'O produto tem contraindicações?',
-      answer: 'O Bebê Feliz é formulado para ser extremamente seguro, sem contraindicações conhecidas. É livre de glúten, lactose e ingredientes de origem animal. Se notar qualquer reação incomum, suspenda o uso e consulte um médico.',
+      question: 'Tenho alguma garantia?',
+      answer: 'Sim! Confiamos tanto na eficácia do nosso método que oferecemos 7 dias de garantia incondicional. Se você não gostar do conteúdo por qualquer motivo, devolvemos 100% do seu investimento.',
     },
     {
-      question: 'Qual é a validade do produto?',
-      answer: 'O Bebê Feliz tem validade de 2 anos a partir da data de fabricação. Após aberto, deve ser consumido em até 6 meses. Mantenha em local fresco e ao abrigo da luz solar direta.',
-    },
-    {
-      question: 'Como é feito o envio e qual o prazo de entrega?',
-      answer: 'Realizamos envios para todo o Brasil. O prazo de entrega varia de 5 a 15 dias úteis dependendo da sua região. Oferecemos frete grátis para compras acima de R$ 150. Todas as embalagens são discretas e seguras.',
-    },
-    {
-      question: 'Qual é a política de devolução?',
-      answer: 'Oferecemos garantia de satisfação de 30 dias. Se você não estiver completamente satisfeito com o produto, entre em contato conosco e devolveremos 100% do seu dinheiro, sem perguntas.',
+      question: 'E se eu tiver dúvidas durante o curso?',
+      answer: 'Você não estará sozinha! Oferecemos suporte dedicado via WhatsApp para tirar todas as suas dúvidas sobre a aplicação da técnica e garantir que você tenha a melhor experiência possível.',
     },
   ];
 
@@ -69,7 +61,7 @@ export function FAQ() {
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-cream/30 to-transparent" />
       </div>
-      
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -90,9 +82,8 @@ export function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className={`bg-white rounded-2xl shadow-soft overflow-hidden transition-all duration-500 ${
-                openIndex === index ? 'ring-2 ring-mint' : ''
-              }`}
+              className={`bg-white rounded-2xl shadow-soft overflow-hidden transition-all duration-500 ${openIndex === index ? 'ring-2 ring-mint' : ''
+                }`}
               style={{ animationDelay: `${index * 50}ms` }}
             >
               <button
@@ -100,28 +91,24 @@ export function FAQ() {
                 className="w-full px-6 py-5 flex items-center justify-between text-left group"
               >
                 <div className="flex items-center gap-4">
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-300 ${
-                    openIndex === index ? 'bg-mint' : 'bg-mint/10'
-                  }`}>
-                    <HelpCircle className={`w-5 h-5 transition-colors duration-300 ${
-                      openIndex === index ? 'text-white' : 'text-mint-dark'
-                    }`} />
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-300 ${openIndex === index ? 'bg-mint' : 'bg-mint/10'
+                    }`}>
+                    <HelpCircle className={`w-5 h-5 transition-colors duration-300 ${openIndex === index ? 'text-white' : 'text-mint-dark'
+                      }`} />
                   </div>
                   <span className="font-display text-lg text-foreground group-hover:text-mint-dark transition-colors">
                     {faq.question}
                   </span>
                 </div>
                 <ChevronDown
-                  className={`w-5 h-5 text-muted-foreground transition-transform duration-300 flex-shrink-0 ${
-                    openIndex === index ? 'rotate-180' : ''
-                  }`}
+                  className={`w-5 h-5 text-muted-foreground transition-transform duration-300 flex-shrink-0 ${openIndex === index ? 'rotate-180' : ''
+                    }`}
                 />
               </button>
-              
+
               <div
-                className={`overflow-hidden transition-all duration-500 ease-out ${
-                  openIndex === index ? 'max-h-96' : 'max-h-0'
-                }`}
+                className={`overflow-hidden transition-all duration-500 ease-out ${openIndex === index ? 'max-h-96' : 'max-h-0'
+                  }`}
               >
                 <div className="px-6 pb-6 pl-20">
                   <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>

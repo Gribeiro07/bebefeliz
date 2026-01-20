@@ -26,10 +26,10 @@ export function Buy() {
   }, []);
 
   const guarantees = [
-    { icon: Truck, text: 'Frete Grátis acima de R$ 150' },
+    { icon: Truck, text: 'Alívio garantido' },
     { icon: Shield, text: 'Garantia de 30 dias' },
     { icon: CreditCard, text: 'Pagamento Seguro' },
-    { icon: Clock, text: 'Entrega Rápida' },
+    { icon: Clock, text: 'Acesso imediato' },
   ];
 
   return (
