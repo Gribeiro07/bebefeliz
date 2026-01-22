@@ -25,7 +25,7 @@ export function Footer() {
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               Alívio natural para a cólica do seu bebê. Mais de 10.000 famílias já experimentaram os benefícios do nosso produto 100% natural.
             </p>
-            
+
             {/* Social Links */}
             <div className="flex gap-3">
               {[
@@ -82,10 +82,10 @@ export function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    onClick={(e) => { 
+                    onClick={(e) => {
                       if (link.href.startsWith('#')) {
-                        e.preventDefault(); 
-                        scrollToSection(link.href); 
+                        e.preventDefault();
+                        scrollToSection(link.href);
                       }
                     }}
                     className="text-muted-foreground hover:text-mint-dark transition-colors underline-animation"
@@ -105,7 +105,7 @@ export function Footer() {
                 <Mail className="w-5 h-5 text-mint flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm text-muted-foreground">E-mail</p>
-                  <a href="mailto:contato@bebefeliz.com.br" className="hover:text-mint-dark transition-colors">
+                  <a href="mailto:produtosdigitaislrv@gmail.com" className="hover:text-mint-dark transition-colors">
                     contato@bebefeliz.com.br
                   </a>
                 </div>
@@ -114,8 +114,8 @@ export function Footer() {
                 <Phone className="w-5 h-5 text-mint flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm text-muted-foreground">WhatsApp</p>
-                  <a href="https://wa.me/5511999999999" className="hover:text-mint-dark transition-colors">
-                    (11) 99999-9999
+                  <a href="https://wa.me/5519910055032" className="hover:text-mint-dark transition-colors">
+                    (19) 99100-55032
                   </a>
                 </div>
               </li>
@@ -123,7 +123,7 @@ export function Footer() {
                 <MapPin className="w-5 h-5 text-mint flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm text-muted-foreground">Endereço</p>
-                  <p>São Paulo, SP - Brasil</p>
+                  <p>Belo horizonte, MG - Brasil</p>
                 </div>
               </li>
             </ul>
@@ -147,7 +147,7 @@ export function Footer() {
         {/* Disclaimer */}
         <div className="mt-8 pt-6 border-t border-white/5">
           <p className="text-xs text-muted-foreground/60 text-center leading-relaxed">
-            IMPORTANTE: Este produto não substitui o aconselhamento médico. Sempre consulte o pediatra do seu bebê antes de iniciar qualquer tratamento. 
+            IMPORTANTE: Este produto não substitui o aconselhamento médico. Sempre consulte o pediatra do seu bebê antes de iniciar qualquer tratamento.
             Os resultados podem variar de pessoa a pessoa. As informações contidas neste site são de caráter informativo e não devem ser consideradas como aconselhamento médico.
           </p>
         </div>

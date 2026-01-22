@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import { ChevronDown, HelpCircle, MessageCircle } from 'lucide-react';
 
 export function FAQ() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -26,28 +26,16 @@ export function FAQ() {
 
   const faqs = [
     {
-      question: 'O Método Shantala é seguro para recém-nascidos?',
-      answer: 'Sim, totalmente seguro. A técnica é suave e respeita a fisiologia do bebê. Pode ser aplicada desde os primeiros dias de vida (após a queda do umbigo, conforme recomendação tradicional) e é amplamente recomendada por pediatras.',
+      question: 'Meu bebê recém-nascido pode receber?',
+      answer: 'Sim, a pressão é ajustada para ser segura desde o dia 1. Ao contrário de massagens vigorosas, o PRVT usa toques sutis (5g) que respeitam a fisiologia delicada do recém-nascido.',
     },
     {
-      question: 'Como acesso o curso após a compra?',
-      answer: 'O acesso é imediato! Assim que o pagamento for confirmado, você receberá um e-mail com seus dados de login para nossa plataforma exclusiva, onde terá acesso a todas as vídeo-aulas e bônus.',
+      question: 'E se eu não tiver tempo?',
+      answer: 'O protocolo leva menos de 7 minutos. Foi desenhado exatamente para mães exaustas que não podem ficar horas tentando ninar o bebê. É uma intervenção rápida e cirúrgica no sistema nervoso.',
     },
     {
-      question: 'Preciso de algum óleo especial?',
-      answer: 'Recomendamos o uso de óleos vegetais naturais (como semente de uva, amêndoas doces ou coco), que são seguros para a pele do bebê. No curso, explicamos detalhadamente quais os melhores óleos para cada situação.',
-    },
-    {
-      question: 'Serve para bebês de qual idade?',
-      answer: 'O método é extremamente benéfico desde o primeiro mês até a fase pré-escolar. As técnicas ajudam nas cólicas do recém-nascido e, posteriormente, no relaxamento e desenvolvimento motor da criança maior.',
-    },
-    {
-      question: 'Tenho alguma garantia?',
-      answer: 'Sim! Confiamos tanto na eficácia do nosso método que oferecemos 7 dias de garantia incondicional. Se você não gostar do conteúdo por qualquer motivo, devolvemos 100% do seu investimento.',
-    },
-    {
-      question: 'E se eu tiver dúvidas durante o curso?',
-      answer: 'Você não estará sozinha! Oferecemos suporte dedicado via WhatsApp para tirar todas as suas dúvidas sobre a aplicação da técnica e garantir que você tenha a melhor experiência possível.',
+      question: 'Funciona para refluxo?',
+      answer: 'Sim. O protocolo ajuda a acalmar o sistema digestivo e o nervo vago (que controla a digestão), reduzindo episódios de desconforto e favorecendo o esvaziamento gástrico natural.',
     },
   ];
 
@@ -66,14 +54,14 @@ export function FAQ() {
         {/* Section Header */}
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <span className="inline-block px-4 py-1 bg-mint/10 rounded-full text-sm font-medium text-mint-dark mb-4">
-            Dúvidas
+            Dúvidas Frequentes
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6">
-            Perguntas{' '}
-            <span className="text-mint-dark">Frequentes</span>
+            Você ainda tem{' '}
+            <span className="text-mint-dark">alguma pergunta?</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Tire suas dúvidas sobre o Bebê Feliz
+            Entenda por que o PRVT é diferente de tudo que você já viu.
           </p>
         </div>
 
@@ -121,13 +109,14 @@ export function FAQ() {
         {/* Contact CTA */}
         <div className={`text-center mt-12 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="text-muted-foreground mb-4">
-            Ainda tem dúvidas? Entre em contato conosco
+            Ainda tem dúvidas? Fale conosco no WhatsApp
           </p>
           <a
-            href="mailto:contato@bebefeliz.com.br"
+            href="https://wa.me/5519910055032" // TODO: Add actual link if available or keep generic
             className="inline-flex items-center gap-2 px-6 py-3 bg-mint text-white rounded-full font-medium hover:bg-mint-dark transition-colors btn-magnetic"
           >
-            Falar com Especialista
+            <MessageCircle className="w-5 h-5" />
+            Falar com Suporte
           </a>
         </div>
       </div>

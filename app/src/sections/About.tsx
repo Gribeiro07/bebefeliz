@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Leaf, Shield, Clock, Award } from 'lucide-react';
+import { AlertCircle, Brain, Ban, Flame } from 'lucide-react';
 
 export function About() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -23,113 +23,77 @@ export function About() {
     return () => observer.disconnect();
   }, []);
 
-  const features = [
-    {
-      icon: Leaf,
-      title: '100% Natural',
-      description: 'Técnica totalmente manual, sem uso de remédios',
-    },
-    {
-      icon: Shield,
-      title: 'Segurança Total',
-      description: 'Método suave e seguro para bebês de todas as idades',
-    },
-    {
-      icon: Clock,
-      title: 'Alívio Rápido',
-      description: 'Resultados visíveis em apenas 15 minutos',
-    },
-    {
-      icon: Award,
-      title: 'Recomendado',
-      description: 'Validado por pediatras em todo o Brasil',
-    },
-  ];
-
   return (
-    <section id="about" ref={sectionRef} className="py-20 lg:py-32 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-mint/5 to-transparent pointer-events-none" />
-
+    <section id="about" ref={sectionRef} className="py-20 lg:py-32 relative overflow-hidden bg-cream/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Image */}
-          <div className={`relative transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
-            <div className="relative">
-              {/* Decorative blob */}
-              <div className="absolute -top-8 -left-8 w-full h-full bg-mint/20 rounded-3xl blob" />
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
-              {/* Main image */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  src="/mother-baby.jpg"
-                  alt="Mãe e bebê feliz"
-                  className="w-full aspect-[4/3] object-cover"
-                />
-
-                {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-mint/20 to-transparent" />
-              </div>
-
-              {/* Floating badge */}
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-4 animate-float">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-mint flex items-center justify-center">
-                    <Award className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-foreground">+10.000</p>
-                    <p className="text-sm text-muted-foreground">Famílias Felizes</p>
-                  </div>
-                </div>
-              </div>
+          {/* Left Column: The Problem/Diagnosis */}
+          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-peach/10 rounded-full mb-6">
+              <AlertCircle className="w-4 h-4 text-peach-dark" />
+              <span className="text-sm font-medium text-peach-dark">Diagnóstico Cirúrgico</span>
             </div>
-          </div>
 
-          {/* Content */}
-          <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
-            <span className="inline-block px-4 py-1 bg-mint/10 rounded-full text-sm font-medium text-mint-dark mb-4">
-              Sobre o Método
-            </span>
-
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6">
-              Confiado por{' '}
-              <span className="font-script text-peach-dark text-5xl lg:text-6xl">mães</span>
-              {' '}e{' '}
-              <span className="font-script text-mint-dark text-5xl lg:text-6xl">pediatras</span>
-              {' '}em todo o Brasil
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-foreground mb-8">
+              O Ciclo da Exaustão:<br />
+              <span className="text-peach-dark">Eu sei onde você está agora.</span>
             </h2>
 
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              O Método Shantala Bebê Feliz foi desenvolvido com muito carinho pensando no bem-estar dos pequenos.
-              Nossa técnica, amplamente estudada e testada, ajuda a aliviar a cólica de forma
-              suave e eficaz, trazendo conforto para o bebê e tranquilidade para toda a família.
-            </p>
-
-            <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-              Cada movimento do método é resultado de anos de prática e validação, garantindo uma técnica
-              segura, eficaz e livre de intervenções medicamentosas, promovendo apenas saúde e conexão.
-            </p>
-
-            {/* Feature grid */}
-            <div className="grid sm:grid-cols-2 gap-6">
-              {features.map((feature, index) => (
-                <div
-                  key={feature.title}
-                  className={`flex items-start gap-4 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-                  style={{ transitionDelay: `${400 + index * 100}ms` }}
-                >
-                  <div className="w-12 h-12 rounded-xl bg-mint/10 flex items-center justify-center flex-shrink-0">
-                    <feature.icon className="w-6 h-6 text-mint-dark" />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-lg text-foreground mb-1">{feature.title}</h3>
-                    <p className="text-sm text-muted-foreground">{feature.description}</p>
-                  </div>
-                </div>
-              ))}
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                Você ama seu filho, mas, secretamente, <strong>teme o pôr do sol</strong>. Quando a noite chega, o choro começa.
+              </p>
+              <p>
+                Você checa a fralda, a temperatura, a fome. Tudo está 'certo', mas ele grita como se sentisse dor.
+              </p>
+              <div className="p-6 bg-white rounded-2xl shadow-sm border border-peach/10 italic">
+                <p>
+                  "Você sente o peito apertar de culpa. A exaustão te faz pensar: 'Eu só queria que ele parasse, nem que fosse por 5 minutos'. E a pior dúvida surge: <span className="text-peach-dark font-medium">'Será que eu não levo jeito para isso? Por que o bebê da vizinha dorme e o meu não?'"</span>
+                </p>
+              </div>
             </div>
           </div>
+
+          {/* Right Column: Why Remedies Fail */}
+          <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
+            <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-lg border border-mint/20 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-mint/10 rounded-full blur-3xl -mr-10 -mt-10" />
+
+              <h3 className="font-display text-2xl lg:text-3xl text-foreground mb-6 flex items-center gap-3">
+                <Ban className="w-8 h-8 text-peach-dark" />
+                Por que os remédios falharam?
+                <span className="text-sm font-sans font-normal text-muted-foreground block mt-1">(A Culpa não é sua)</span>
+              </h3>
+
+              <div className="space-y-6">
+                <p className="text-muted-foreground leading-relaxed">
+                  Você foi ensinada a tratar o sintoma: a barriga dura, os gases. Mas a <strong>neurociência pediátrica</strong> revela que o intestino contrai porque o cérebro está em pânico.
+                </p>
+
+                <div className="flex gap-4 items-start">
+                  <div className="w-10 h-10 rounded-full bg-peach/10 flex items-center justify-center shrink-0 mt-1">
+                    <Flame className="w-5 h-5 text-peach-dark" />
+                  </div>
+                  <p className="text-foreground font-medium">
+                    Tentar acalmar um bebê estressado tratando apenas a barriga é como tentar apagar um incêndio na casa pintando a parede.
+                  </p>
+                </div>
+
+                <div className="flex gap-4 items-start">
+                  <div className="w-10 h-10 rounded-full bg-mint/10 flex items-center justify-center shrink-0 mt-1">
+                    <Brain className="w-5 h-5 text-mint-dark" />
+                  </div>
+                  <div>
+                    <p className="text-muted-foreground">
+                      Enquanto o <strong>Nível de Cortisol</strong> do seu bebê estiver alto, nenhum remédio fará ele dormir profundamente. Ele está em modo de sobrevivência.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
