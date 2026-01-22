@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Check, Truck, Shield, CreditCard, Gift, Clock, Headphones, BookOpen, Video } from 'lucide-react';
+import { Truck, Shield, CreditCard, Clock, Headphones, BookOpen, Video } from 'lucide-react';
 
 export function Buy() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -125,7 +125,7 @@ export function Buy() {
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-center">
-            {guarantees.map((guarantee, index) => (
+            {guarantees.map((guarantee) => (
               <div
                 key={guarantee.text}
                 className="flex items-center gap-2 justify-center p-2 rounded-lg"
